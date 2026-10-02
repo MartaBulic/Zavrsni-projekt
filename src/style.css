@@ -1,0 +1,209 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #0f172a;
+  --primary-light: #1e293b;
+  --accent: #14b8a6;
+  --accent-hover: #0d9488;
+
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-soft: #f1f5f9;
+
+  --text: #0f172a;
+  --text-secondary: #64748b;
+
+  --border: #e2e8f0;
+
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --danger: #dc2626;
+
+  --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 20px 45px rgba(15, 23, 42, 0.12);
+
+  --radius: 18px;
+  --radius-lg: 24px;
+}
+
+[data-theme='dark'] {
+  --primary: #e2e8f0;
+  --primary-light: #f1f5f9;
+
+  --bg: #0b1220;
+  --surface: #1e293b;
+  --surface-soft: #273449;
+
+  --text: #f1f5f9;
+  --text-secondary: #94a3b8;
+
+  --border: #334155;
+
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text);
+  font-weight: 700;
+  margin: 0;
+}
+
+h1 {
+  font-size: 34px;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Cards */
+
+.card,
+.card-box,
+.custom-card,
+.setting-card,
+.report-card,
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
+}
+
+.card:hover,
+.card-box:hover,
+.custom-card:hover,
+.setting-card:hover,
+.report-card:hover,
+.stat-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Buttons */
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  border-radius: 14px;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.btn-outline-secondary {
+  border-radius: 14px;
+}
+
+/* Forms */
+
+.form-control,
+.form-select {
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  padding: 12px 14px;
+  background: var(--surface);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.2rem rgba(20, 184, 166, 0.15);
+}
+
+/* Tables */
+
+.table {
+  margin-bottom: 0;
+}
+
+.table th {
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--border);
+}
+
+.table td {
+  vertical-align: middle;
+  border-bottom: 1px solid var(--border);
+  padding: 16px 10px;
+  color: var(--text);
+}
+
+/* Badges */
+
+.badge {
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-weight: 600;
+}
+
+/* Page spacing */
+
+.page-header {
+  margin-bottom: 32px;
+}
+
+.page-header p {
+  margin-top: 6px;
+}
+
+/* Utility */
+
+.text-muted {
+  color: var(--text-secondary) !important;
+}
+
+.shadow-soft {
+  box-shadow: var(--shadow-md);
+}
