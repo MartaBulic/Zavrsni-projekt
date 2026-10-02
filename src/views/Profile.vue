@@ -240,11 +240,8 @@ const averageROI = computed(() => {
 const score = computed(() => {
   if (!campaigns.value.length) return 0
 
-  return Math.min(
-    100,
-
-    Math.round(Number(averageROI.value))
-  )
+  // ocjena je ograničena na raspon 0 - 100
+  return Math.max(0, Math.min(100, Math.round(Number(averageROI.value))))
 })
 </script>
 

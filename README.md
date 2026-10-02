@@ -37,7 +37,7 @@ npm run preview   # pregled build-a
 ```
 src/
   components/       # ponovno koristive komponente (grafovi, StatCard, modal, layout)
-  views/            # stranice (Dashboard, Campaigns, Analytics, Reports, Settings, Profile, Login, Register)
+  views/            # stranice (Splash, Dashboard, Campaigns, Analytics, Reports, Settings, Profile, Login, Register)
   stores/           # Pinia store-ovi (auth, campaign) — čitaju/pišu u localStorage
   router/           # rute i auth guard
   composables/      # useTheme (dark mode), useChartColors (boje grafova ovisno o temi)
@@ -48,6 +48,7 @@ src/
 
 ## Funkcionalnosti
 
+- Uvodni (splash) zaslon jednom po sesiji — preskače se nakon 5 s, klikom ili pritiskom tipke
 - Registracija / prijava (localStorage, bez pravog backenda), email nije osjetljiv na velika/mala slova
 - CRUD kampanja (naziv, platforma, budžet, prihod, klikovi, impresije, konverzije)
 - Izvoz kampanja u CSV (Campaigns stranica)

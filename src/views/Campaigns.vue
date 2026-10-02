@@ -419,7 +419,7 @@ function validateCampaign() {
     return 'Clicks, impressions and conversions cannot be negative.'
   }
 
-  if (campaign.clicks > campaign.impressions && campaign.impressions > 0) {
+  if (Number(campaign.clicks) > Number(campaign.impressions)) {
     return 'Clicks cannot be greater than impressions.'
   }
 

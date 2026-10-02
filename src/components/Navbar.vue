@@ -138,7 +138,7 @@ const userName = computed(() => {
 })
 
 const accountType = computed(() => {
-  return auth.currentUser?.accountType || 'Marketing Analyst'
+  return auth.currentUser?.accountType || 'Analyst'
 })
 
 const initial = computed(() => {
