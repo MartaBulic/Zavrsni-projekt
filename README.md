@@ -1,4 +1,4 @@
-# Digital Marketing Dashboard
+# AdAnalytix
 
 Web aplikacija za analizu podataka digitalnog marketinga — praćenje kampanja, klikova, budžeta, prihoda i ROI-a kroz dashboard, analitiku i izvještaje.
 

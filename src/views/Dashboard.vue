@@ -142,7 +142,7 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, ref, onMounted, onUnmounted } from 'vue'
 
 import { useCampaignStore } from '../stores/campaign'
 
@@ -262,6 +262,24 @@ const sortedCampaigns = computed(() => {
 
 const displayedCampaigns = computed(() => {
   return showAll.value ? sortedCampaigns.value : sortedCampaigns.value.slice(0, 3)
+})
+
+let refreshInterval = null
+
+onMounted(() => {
+  const enabled = localStorage.getItem('autoRefresh') !== 'false'
+
+  if (enabled) {
+    refreshInterval = setInterval(() => {
+      store.refreshCampaigns()
+    }, 30000)
+  }
+})
+
+onUnmounted(() => {
+  if (refreshInterval) {
+    clearInterval(refreshInterval)
+  }
 })
 </script>
 
