@@ -45,7 +45,7 @@
             </small>
 
             <div class="forgot-row">
-              <a href="#" @click.prevent>Forgot password?</a>
+              <span class="forgot-link-disabled">Forgot password?</span>
             </div>
           </div>
 
@@ -216,6 +216,13 @@ function loginUser() {
 
 .forgot-row a {
   font-size: 13px;
+}
+
+.forgot-link-disabled {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: default;
 }
 
 .form-control {

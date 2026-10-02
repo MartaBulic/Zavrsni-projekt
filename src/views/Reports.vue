@@ -67,7 +67,7 @@
           </div>
 
           <div class="info-row">
-            <span> Average CTR </span>
+            <span> Overall CTR </span>
 
             <strong> {{ averageCTR }}% </strong>
           </div>

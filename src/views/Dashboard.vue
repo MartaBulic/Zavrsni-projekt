@@ -228,7 +228,7 @@ const cards = computed(() => [
   },
 
   {
-    title: 'Average CTR',
+    title: 'Overall CTR',
     value: averageCTR.value + '%',
     icon: 'bi bi-graph-up-arrow',
     class: 'green'
